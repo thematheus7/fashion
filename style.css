@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #FE93C1;
+    --text: #001d20;
+    --msm: #0D0000;
+    --h1: 4rem;
+    --p: 1rem;
+    --outhr: #F2ECE9;
+    --fashion: #750137;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 80px;
+    box-shadow: 0 0.1rem 0.5rem var(--msm);
+    width: 100%;
+    background: var(--bg);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navegacion .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--fashion);
+}
+
+.navegacion .logo i {
+    color: var(--msm);
+    font-size: 40px;
+    margin-right: 5px;
+}
+
+.navegacion ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navegacion ul li a {
+    color: var(--msm);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navegacion ul li a:hover {
+    color: var(--outhr);
+}
+
+.navegacion i {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.navegacion i:hover {
+    color: var(--outhr);
+    transform: translateY(-5px);
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--msm);
+    margin: 5px auto;
+    transition: 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+    background: var(--fashion);
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 250px 10%;
+}
+
+.home-text {
+    max-width: 37rem;
+}
+
+.home-text h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+.home-text span {
+    color: #750137;
+    font-weight: 1000;
+}
+
+.btn {
+    padding: 15px 45px;
+    border-radius: 20px;
+    background: var(--fashion);
+    color: var(--outhr);
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color: var(--fashion);
+    background: var(--text);
+}
+
+.main-img {
+    display: flex;
+    gap: 5rem;
+}
+
+.home-img {
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    display: flex;
+}
+
+.main {
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main li img {
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+}
+
+.row {
+    background: #750137;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.55s ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row:hover {
+    transform: translateY(-8px);
+}
+
+.row2 li img {
+    width: 80px;
+}
+
+.row2 {
+    background: var(--text);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.55s ease;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.row2:hover {
+    transform: translateY(-8px);
+}
+
+
+@media (max-width: 785px) {
+    .navegacion {
+        padding: 18px 20px;
+    }
+
+    .navegacion .logo {
+        margin-bottom: 3rem;
+    }
+
+    .navegacion ul {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+
+    .navegacion ul.open {
+        right: 0;
+    }
+
+    .menu.bx-x .bar:nth-child(1) {
+        transform: translateY(4px) rotate(45deg);
+       
+    }
+
+    .menu.bx-x .bar:nth-child(2) {
+        display: none;
+    }
+
+    .menu.bx-x .bar:nth-child(3) {
+        transform: translateY(-4px) rotate(-45deg);
+    }
+   
+    .menu {
+        display: block;
+    }
+
+    .home {
+        padding: 150px 5%;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .main-img {
+        display: flex;
+    }
+    .main.none{
+        display: none;
+    }
+
+
+}
